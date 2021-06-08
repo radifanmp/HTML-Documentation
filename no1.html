@@ -1,0 +1,80 @@
+<?php
+
+ 
+echo "Nana berangkat dari titik A menuju titik B tepat pukul 12:00 dengan kecepatan tetap 7 m/detik. Angela juga berangkat dari titik A menuju titik B tepat pukul 13.00 dengan kecepatan tetap 10 m/detik. Buat lah program untuk menghitung dan mencetak pada pukul berapa Nana dan Angela tepat berada pada titik yang sama dimana Angelal mulai mendahului Nana?";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<br><br><br><br>
+<form action="" method="post">
+  <label for="knana">kecepatan nana m/s</label>
+  <input type="text" id="knana" name="knana" value="7"><br><br>
+  <label for="jnana">jam keberangkatan nana:</label>
+  <input type="time" id="jnana" name="jnana" readonly value="12:00"><br><br>
+  <label for="kangela">kecepatan angela m/s</label>
+  <input type="text" id="kangela" name="kangela" value="10"><br><br>
+  <label for="jangela">jam keberangkatan angela:</label>
+  <input type="time" id="jangela" name="jangela" readonly value="13:00"><br><br>
+ 
+  <button name="hitung">hitung</button>
+</form>
+
+<?php
+
+if(isset($_POST["hitung"])) {
+    $kecepatan_nana = $_POST["knana"];
+    $kecepatan_angela = $_POST["kangela"];
+
+    $konversi_menit_nana = $kecepatan_nana * 60;
+    $konversi_jam_nana = $konversi_menit_nana * 60;
+
+    echo "kecepatan nana $konversi_jam_nana m/jam.<br> atau <br>";
+
+    $konversi_km_nana = $konversi_jam_nana / 1000;
+    echo "$konversi_km_nana km/jam.<br>";
+
+    $konversi_menit_angela = $kecepatan_angela * 60;
+    $konversi_jam_angela = $konversi_menit_angela * 60;
+
+    echo "kecepatan nana angela $konversi_jam_angela m/jam <br> atau.<br>";
+
+    $konversi_km_angela = $konversi_jam_angela / 1000;
+    echo "$konversi_km_angela km/jam.<br>.<br>";
+
+    
+
+    $selisih_waktu = 60;
+
+    $selisih_jarak = $konversi_km_nana/($konversi_km_angela-$konversi_km_nana);
+
+  
+
+    $selisih_waktu_ke_jam = $selisih_waktu / 60;
+
+    $final = $selisih_waktu_ke_jam * $selisih_jarak;
+
+    echo "final $final.<br>";
+
+    $time = $_POST["jangela"];
+  
+    // $detikkejam = $time*3600;
+
+    echo "<h2>Diperhitungan Matematiknya Angela berhasil menyusul nana pada jam 15:33 (ga yakin :D) tapi saya ga tahu gimana caranya nambah waktu 13:00 dengan 2,333 jam dibahasa permograman.</h2>";
+
+
+}
+
+?>
+
+</body>
+</html>
+
+

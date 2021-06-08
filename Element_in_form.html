@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element In Form</title>
+</head>
+<body>
+
+    <div style="text-align:center">
+        <h2>Element In Form</h2>
+    
+        <p>Ini adalah sebuah contoh form element</p><br>
+    </div>
+
+    <div style="display:flex; justify-content:center; margin-left:10px; margin-right:10px; margin-bottom:20px;">
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <fieldset>
+            <legend>Personal Form</legend>
+        <!-- input -->
+            <label>Frist Name</label> <br>
+            <input type="text" id="fname">
+                <br><br>
+            <label>Last Name</label><br>
+            <input type="text" id="lname">
+
+            <br><br>
+
+            <!-- Select -->
+            <label>City</label><br>
+            <select id="city" name="city" >
+                <option value="#">---</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Tangerang Selatan">Tangerang Selatan</option>
+                <option value="Bekasi">Bekasi</option>
+                <option value="Bogor">Bogor</option>
+            </select>
+
+                <br><br>
+
+            <label>Motocycle</label><br>
+            <select id="bike" name="bike" size="6" multiple >
+                <option value="#">---</option>
+                <option value="Honda">Honda</option>
+                <option value="Yamaha">Yamaha</option>
+                <option value="Suzuki">Suzuki</option>
+                <option value="Kawasaki">Kawasaki</option>
+                <option value="Triumph">Triumph</option>
+            </select>
+
+                <br><br>
+
+            <!-- TextArea -->
+            <label>Address</label><br>
+            <textarea name="address" rows="10" cols="48"></textarea>
+
+                <br><br>
+
+            <!-- Button -->
+            <button type="button" onclick="alert('Hello this is button type')">Clik Me</button>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+                <br><br>
+
+            <label>Sub-district</label><br>
+            <!-- Data List -->
+            <input list="subdistrict">
+            <datalist id="subdistrict">
+                <option value="Tanah Manisan">
+                <option value="Jatinegara">
+                <option value="Cawang">
+                <option value="Cawang Uki">
+                <option value="Halim">
+                <option value="Berlan">
+            </datalist>
+
+                <br><br>
+
+            <!-- Output -->
+            Value 1 :
+            <input type="range" name="a" id="a" value="50">
+
+            +
+
+            Value 2 :
+            <input type="number" name="b" id="b" value="50">
+
+            =
+
+            <output name="result" for="1 2"></output>
+        </fieldset>
+    </form>
+    </div>
+
+</body>
+</html>
+
+
+<!-- 
+    Element adalah bagian terkecil dari sebuah HTML contoh nya seperti
+
+    <div>
+    <form>
+    <input>
+    <label>
+    <...>
+
+    Element form adalah bagian terkecil yang hanya bisa digunakan di dalam element form itu sendiri
+    <form>
+        <label>Nama</label> <input type=text>
+        <input>
+        <label>
+        <select>
+        <textarea>
+        <button>
+        <fieldset>
+        <legend>
+        <datalist>
+        <output>
+        <option>
+        <optgroup>
+    </form>
+ -->
